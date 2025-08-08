@@ -4,6 +4,7 @@ Model Context Protocol (MCP) server that provides up-to-date documentation for t
 
 It uses the same approach as Zig's official autodoc (ziglang.org) by reading STD lib source files directly through a WASM module. However instead of returning HTML, it outputs Markdown which significantly reduces token usage.
 
+
 > [!TIP]
 > Add `use zigdocs` to your prompt if you want to explicitly instruct the LLM to use Zig docs tools. Otherwise, LLM will automatically decide when to utilize MCP tools based on the context of your questions.
 
@@ -163,3 +164,7 @@ Documentation is fetched from ziglang.org and cached in platform-specific direct
 - Linux: `~/.cache/zig-mcp/`
 - macOS: `~/Library/Caches/zig-mcp/`
 - Windows: `%LOCALAPPDATA%\zig-mcp\`
+
+## Build From Source
+
+> **Note**: This project requires Zig version `0.15.0-dev.1145+3ae0ba096` to build.
